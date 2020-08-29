@@ -52,10 +52,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
+        node-version: "12.x"
         script: |
           cd /root/nuxt/
           wget https://github.com/zhao-zwl/realworld-nuxt-zwl/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
-          nvm use v12.18.3
           npm install --production
           pm2 reload pm2.config.json
