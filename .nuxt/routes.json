@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/home",
+        "_name": "_d17eeba2"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/login",
+        "_name": "_51090419"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/login",
+        "_name": "_51090419"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/profile",
+        "_name": "_0bff3259"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/settings",
+        "_name": "_05272973"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/editor",
+        "_name": "_78e8ba86"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "/Users/zhaowenlong/培训/realworld-nuxt-zwl/pages/article",
+        "_name": "_1a6d14b4"
+      }
+    ],
+    "_name": "_614b070c"
+  }
+]
