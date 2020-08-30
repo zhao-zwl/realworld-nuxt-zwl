@@ -28,7 +28,7 @@
               <input class="form-control form-control-lg"
                      type="text"
                      placeholder="Your Name"
-                     v-model="username"
+                     v-model="user.username"
                      required>
             </fieldset>
             <fieldset class="form-group">

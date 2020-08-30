@@ -51,6 +51,12 @@ export const addCommet = (slug, data) => {
     data
   })
 }
+export const delCommet = (slug,id) => {
+  return request({
+    method: 'DELETE',
+    url: `/api/articles/${slug}/comments/${id}`
+  })
+}
 
 export const addArticle = data => {
   return request({

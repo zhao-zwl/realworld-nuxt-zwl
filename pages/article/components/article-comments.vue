@@ -36,6 +36,9 @@
             {{comment.author.username}}
           </nuxt-link>
           <span class="date-posted">{{comment.createdAt | date('MMM DD, YYYY')}}</span>
+          <span class="mod-options" v-if="comment.author.username === user.username">
+            <i class="ion-trash-a" @click="delComment(comment)"></i>
+          </span>
         </div>
       </div>
     </template>
@@ -43,7 +46,7 @@
 </template>
 
 <script>
-import { getComments, addCommet } from "@/api/article.js";
+import { getComments, addCommet,delCommet} from "@/api/article.js";
 import { mapState } from "vuex";
 export default {
   name: "ArticlesComments",
@@ -82,6 +85,10 @@ export default {
       this.comments = data.comments;
       this.comment = "";
     },
+    async delComment(item){
+      await delCommet(this.article.slug,item.id);
+      this.getComments();
+    }
   },
 };
 </script>

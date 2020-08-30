@@ -19,7 +19,6 @@
                            exact>Your Feed</nuxt-link>
               </li>
               <li class="nav-item">
-                <!-- <a class="nav-link active" href="">Global Feed</a> -->
                 <nuxt-link class="nav-link"
                            :class="{active: tab==='global_feed'}"
                            :to="{name:'home'}"
@@ -42,9 +41,7 @@
               <nuxt-link :to="{name: 'profile', params: {username:article.author.username}}">
                 <img :src="article.author.image" />
               </nuxt-link>
-              <!-- <a href="profile.html"><img src="http://i.imgur.com/Qr71crq.jpg" /></a> -->
               <div class="info">
-                <!-- <a href="" class="author">Eric Simons</a> -->
                 <nuxt-link class="author"
                            :to="{name: 'profile', params: {username:article.author.username}}">
                   {{article.author.username}}
@@ -81,7 +78,6 @@
         <div class="col-md-3">
           <div class="sidebar">
             <p>Popular Tags</p>
-
             <div class="tag-list">
               <nuxt-link v-for="item in tags"
                          :key="item"
@@ -90,10 +86,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </template>
 
@@ -112,7 +106,7 @@ export default {
     const page = Number.parseInt(query.page || 1);
     const limit = 20;
     const tab = query.tab || "global_feed";
-    const tag = query.tag;
+    const tag = query.tag||"";
 
     const loadArticles =
       tab === "your_feed" ? getYourFeedArticles : getArticles;
@@ -126,7 +120,7 @@ export default {
     ]);
     const { articles, articlesCount } = articleRes.data;
     const { tags } = tagRes.data;
-    articles.forEach((article) => (article.favoriteDisabled = false));
+    //articles.forEach((article) => (article.favoriteDisabled = false));
     return {
       articles,
       articlesCount,
