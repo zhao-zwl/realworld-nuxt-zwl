@@ -59,7 +59,7 @@
 import { login, register } from "@/api/user.js";
 const Cookie = process.client ? require("js-cookie") : undefined;
 export default {
-  middleware:['notAuthenticated'],
+  middleware: ["notAuthenticated"],
   name: "login",
   data() {
     return {

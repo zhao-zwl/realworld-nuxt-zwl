@@ -1,4 +1,6 @@
-import { request } from '@/plugins/request'
+import {
+  request
+} from '@/plugins/request'
 
 export const getArticles = params => {
   return request({
@@ -51,7 +53,7 @@ export const addCommet = (slug, data) => {
     data
   })
 }
-export const delCommet = (slug,id) => {
+export const delCommet = (slug, id) => {
   return request({
     method: 'DELETE',
     url: `/api/articles/${slug}/comments/${id}`

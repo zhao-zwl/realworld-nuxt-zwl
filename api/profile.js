@@ -1,4 +1,6 @@
-import { request } from '@/plugins/request'
+import {
+  request
+} from '@/plugins/request'
 
 export const getProfile = username => {
   return request({

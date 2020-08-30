@@ -106,7 +106,7 @@ export default {
     const page = Number.parseInt(query.page || 1);
     const limit = 20;
     const tab = query.tab || "global_feed";
-    const tag = query.tag||"";
+    const tag = query.tag || "";
 
     const loadArticles =
       tab === "your_feed" ? getYourFeedArticles : getArticles;
